@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Nav from './body/nav.js';
-import CABody from './CA-grid/ca-body.js';
+import Rules from './body/rules.js'
+import MainBody from './body/mainBody.js';
 
 
 
@@ -12,7 +13,8 @@ function App() {
         <Nav />
       </header>
       <section className='body'>
-        <CABody />
+        <MainBody />
+        <Rules />
       </section>
     </div>
   );

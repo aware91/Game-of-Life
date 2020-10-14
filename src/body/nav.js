@@ -4,7 +4,11 @@ import './body.css';
 function Nav() {
     return (
         <div className="Nav">
-            Anthony Ware's Cellular Automata and Conway's "Game of Life"
+            Anthony Ware's "Game of Life"
+            <div className='navLinks'>
+                <a href='#'>Game of Life</a>
+                <a href='#'>About</a>
+            </div>
         </div>
     );
 }
