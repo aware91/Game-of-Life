@@ -4,7 +4,13 @@ import './body.css';
 function rules() {
     return (
         <div className='rules'>
-            Rules
+            <h3>Rules:</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
     )
 }
