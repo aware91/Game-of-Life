@@ -4,7 +4,7 @@ import './ca.css';
 function caBody() {
     return (
         <div className='caBody'>
-            
+            test
         </div>
     )
 }
