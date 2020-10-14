@@ -25,7 +25,7 @@
     margin: auto;
 }
 
-.caBody {
+.goflBody {
     border: 1px solid green;
     display: flex;
     flex-flow: column;
@@ -33,7 +33,7 @@
     align-self: center;
 }
 
-.caButtons {
+.goflButtons {
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;

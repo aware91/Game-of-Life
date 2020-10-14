@@ -1,15 +1,15 @@
 import React from 'react';
-import CABody from '../CA-grid/ca-body.js';
+import GofLBody from '../GofL/GofL.js';
 import Examples from './examples.js';
 import './body.css';
 
 function mainBody() {
     return (
         <div className='mainBody'>
-            <div className='caBody'>
+            <div className='goflBody'>
                 <h3>Generation: </h3>
-                <CABody />
-                <div className='caButtons'>
+                <GofLBody />
+                <div className='goflButtons'>
                     <button>Play</button>
                     <button>Stop</button>
                     <button>Clear</button>
