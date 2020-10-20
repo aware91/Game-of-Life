@@ -1,23 +1,17 @@
-import React from 'react';
-import './App.css';
-import Nav from './body/nav.js';
-import Rules from './body/rules.js'
-import MainBody from './body/mainBody.js';
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap-grid.min.css'
+import Main from './components/main.js'
+import About from './components/about.js'
+import Footer from './components/footer.js'
 
-
-
-function App() {
+const App = () => {
   return (
-    <div className='app'>
-      <header className='header'>
-        <Nav />
-      </header>
-      <section className='body'>
-        <MainBody />
-        <Rules />
-      </section>
+    <div>
+      <Main />
+      <About />
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
