@@ -62,6 +62,15 @@ button {
   margin: 3px;
 }
 
+.drop{
+  text-decoration: none;
+  padding: 5px;
+  margin-top: 5px;
+  background-color: white;
+}
+.drop:hover{
+  background-color: rgb(235, 243, 129);
+}
 
 .about {
   padding: 5px;
@@ -74,18 +83,25 @@ button {
 
 .information {
   opacity: 0.8;
-  width: 40%;
-  border: blue 5px solid;
+  width: 50%;
 }
 
 .rules {
   opacity: 0.8;
-  width: 55%;
-  border: blue 5px solid;;
+  width: 50%;
   padding: 0 10px;
 }
 
 .controls {
   display: flex;
   flex-flow: row wrap;
+}
+
+.size {
+  border: 1px solid black;
+  color: orange;
+  text-decoration: none;
+  margin: 4px;
+  padding: 2px;
+  border-radius: 5px;
 }

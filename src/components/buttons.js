@@ -49,8 +49,8 @@ class Buttons extends React.Component {
                 id=" dropdown-basic-button"
                 onSelect={this.handleSelect}
             >
-                <DropdownItem>50x50</DropdownItem>
-                <DropdownItem eventKey="1">75x75</DropdownItem>
+                <DropdownItem className='size'>50x50</DropdownItem>
+                <DropdownItem eventKey="1" className='size'>75x75</DropdownItem>
             </DropdownButton>
             </ButtonToolbar>
         </div>

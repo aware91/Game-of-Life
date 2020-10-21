@@ -7,12 +7,13 @@ class Examples extends React.Component {
         <div className="center">
             <h4>Examples</h4>
             <ButtonToolbar>
-            <Button variant="outline-light" size="sm" onClick={this.props.glider}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Game_of_life_animated_glider.gif" alt="Glider"/>
+            <Button 
+                variant="outline-light" 
+                onClick={this.props.glider}>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Game_of_life_animated_glider.gif" alt="Glider"/>
             </Button>
             <Button
                 variant="outline-light"
-                size="sm"
                 onClick={this.props.pulsar}
             >
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Game_of_life_pulsar.gif" alt="Pulsar"/>
