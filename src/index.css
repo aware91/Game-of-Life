@@ -18,7 +18,7 @@
 }
 
 .box:hover {
-  background: #00ccff;
+  background: darkblue;
 }
 
 .center {
@@ -31,7 +31,6 @@
   width: 150px;
   line-height: 0;
   margin: auto;
-  box-shadow: 0px 0px 15px  blue;
   margin-top: 20px;
 }
 

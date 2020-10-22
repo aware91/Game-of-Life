@@ -3,10 +3,6 @@ import Grid from "./grid";
 import Buttons from "./buttons";
 import Examples from "./examples";
 
-
-// state variable will be saved as state in the Main component which in charge of that variable.
-// pass that variable to other components, that variable is going to become props. 
-// state variable changes, it will automatically propagate to other components
 /*
 Double Buffering: There are two arrays of data for the automaton. One of them holds the data that the user currently sees on the canvas. The other one is where the next frame to be shown is being actively constructed. After the new frame is constructed, the next frame becomes the current frame, and the current frame becomes the next frame. And the process repeats.
 */
@@ -26,8 +22,6 @@ class Main extends React.Component {
     }
 
 
-    // never update a state directly, make a copy of the array instead
-    // helper function - setState function --> updating a state
     selectBox = (row, col) => {
         let gridCopy = arrayClone(this.state.gridFull);
         gridCopy[row][col] = !gridCopy[row][col];
@@ -36,7 +30,6 @@ class Main extends React.Component {
         });
     };
 
-    // RANDOM/SEED
     seed = () => {
         let gridCopy = Array(this.rows)
         .fill()
@@ -76,7 +69,6 @@ class Main extends React.Component {
         this.playButton();
     };
 
-    // refactor to call a function
     clear = () => {
         let grid = Array(this.rows)
         .fill()
@@ -103,27 +95,25 @@ class Main extends React.Component {
         this.clear();
     };
 
-    // Play Method & Game Logic
     play = () => {
         let g = this.state.gridFull;
         let g2 = arrayClone(this.state.gridFull);
 
         for (let i = 0; i < this.rows; i++) {
-    // how many neighbors? 8 potential neighbors - decide if it's going to die or live
-        for (let j = 0; j < this.cols; j++) {
-            let count = 0; 
-            if (i > 0) if (g[i - 1][j]) count++;
-            if (i > 0 && j > 0) if (g[i - 1][j - 1]) count++;
-            if (i > 0 && j < this.cols - 1) if (g[i - 1][j + 1]) count++;
-            if (j < this.cols - 1) if (g[i][j + 1]) count++;
-            if (j > 0) if (g[i][j - 1]) count++;
-            if (i < this.rows - 1) if (g[i + 1][j]) count++;
-            if (i < this.rows - 1 && j > 0) if (g[i + 1][j - 1]) count++;
-            if (i < this.rows - 1 && this.cols - 1) if (g[i + 1][j + 1]) count++;
+            for (let j = 0; j < this.cols; j++) {
+                let count = 0; 
+                if (i > 0) if (g[i - 1][j]) count++;
+                if (i > 0 && j > 0) if (g[i - 1][j - 1]) count++;
+                if (i > 0 && j < this.cols - 1) if (g[i - 1][j + 1]) count++;
+                if (j < this.cols - 1) if (g[i][j + 1]) count++;
+                if (j > 0) if (g[i][j - 1]) count++;
+                if (i < this.rows - 1) if (g[i + 1][j]) count++;
+                if (i < this.rows - 1 && j > 0) if (g[i + 1][j - 1]) count++;
+                if (i < this.rows - 1 && this.cols - 1) if (g[i + 1][j + 1]) count++;
 
-            if (g[i][j] && (count < 2 || count > 3)) g2[i][j] = 0; 
-            if (!g[i][j] && count === 3) g2[i][j] = 1; 
-        }
+                if (g[i][j] && (count < 2 || count > 3)) g2[i][j] = 0; 
+                if (!g[i][j] && count === 3) g2[i][j] = 1; 
+            }
         }
 
         this.setState({
@@ -132,7 +122,6 @@ class Main extends React.Component {
         });
     };
 
-    // Examples
     glider = () => {
         let gridCopy = Array(this.rows)
         .fill()
@@ -220,7 +209,7 @@ class Main extends React.Component {
         })
         this.pauseButton();
     }
-    // will be used as props in the Grid component
+
     render() {
         return (
         <div>
