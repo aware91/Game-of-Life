@@ -25,9 +25,6 @@ class Main extends React.Component {
         };
     }
 
-
-    // never update a state directly, make a copy of the array instead
-    // helper function - setState function --> updating a state
     selectBox = (row, col) => {
         let gridCopy = arrayClone(this.state.gridFull);
         gridCopy[row][col] = !gridCopy[row][col];
@@ -36,7 +33,6 @@ class Main extends React.Component {
         });
     };
 
-    // RANDOM/SEED
     seed = () => {
         let gridCopy = Array(this.rows)
         .fill()
@@ -76,7 +72,6 @@ class Main extends React.Component {
         this.playButton();
     };
 
-    // refactor to call a function
     clear = () => {
         let grid = Array(this.rows)
         .fill()
@@ -103,13 +98,11 @@ class Main extends React.Component {
         this.clear();
     };
 
-    // Play Method & Game Logic
     play = () => {
         let g = this.state.gridFull;
         let g2 = arrayClone(this.state.gridFull);
 
         for (let i = 0; i < this.rows; i++) {
-    // how many neighbors? 8 potential neighbors - decide if it's going to die or live
         for (let j = 0; j < this.cols; j++) {
             let count = 0; 
             if (i > 0) if (g[i - 1][j]) count++;
@@ -132,7 +125,6 @@ class Main extends React.Component {
         });
     };
 
-    // Examples
     glider = () => {
         let gridCopy = Array(this.rows)
         .fill()
@@ -220,7 +212,6 @@ class Main extends React.Component {
         })
         this.pauseButton();
     }
-    // will be used as props in the Grid component
     render() {
         return (
         <div>
