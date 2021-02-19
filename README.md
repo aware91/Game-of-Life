@@ -1,3 +1,5 @@
+# Conway's Game of Life
+
 CS Build Week 1
 
 Cellular Automata and Conway's "Game of Life"
